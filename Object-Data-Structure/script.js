@@ -76,6 +76,13 @@ const shoppingCart = {
         { name: "Jacket", price: 100 },
     ],
 };
+// Adding new items to the shopping cart
+shoppingCart.Gadgets.push({ name: "Smartphone", price: 800 });
+shoppingCart.Wears.push({ name: "Sneakers", price: 60 });
+
+// Removing an item from the shopping cart
+shoppingCart.Gadgets.splice(1, 1); // Removes the Mouse from Gadgets
+
 
 //6. Converting the shopping cart object to a JSON string
 const jsonString = JSON.stringify(shoppingCart);
