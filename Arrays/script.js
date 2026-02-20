@@ -45,15 +45,33 @@ console.log(removeDuplicates(numValues));
 
 // 5. Sorting an array in ascending order
 const unsortedArray = [5, 2, 9, 1, 5, 6];
+let ascendingArray = unsortedArray.sort((a, b) => a - b);
+console.log(ascendingArray);
 
 // 5(b). Sorting an array in descending order
 const unsortedArray2 = [5, 2, 9, 1, 5, 6];
+let descendingArray = unsortedArray2.sort((a, b) => b - a);
+console.log(descendingArray);
 
 // 6. Counting the occurrences of a specific element in an array
 const elements = ["apple", "banana", "orange", "apple", "grape"];
+function countOccurrences(arr, target) {
+    let count = 0;
+    
+    for (let item of arr) {
+        if (item === target) {
+            count++;
+        }
+    }
+    
+    return count;
+}
+console.log(countOccurrences(elements, "apple"));
 
 // 7. Filter out even numbers from an array
 const mixedNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let oddNumbers = mixedNumbers.filter(num => num % 2 !== 0);
+console.log(oddNumbers);
 
 // 8. Merging two arrays into one
 const array1 = [1, 2, 3];
